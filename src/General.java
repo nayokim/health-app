@@ -14,11 +14,11 @@ public class General {
         this.foodEaten = foodEaten;
     }
 
-    public General (double dailyWeight, double caloricIntake, String foodEaten) {
+    public General (double dailyWeight, double caloricIntake, String foodEaten){
         this.dailyWeight = dailyWeight;
         this.caloricIntake = caloricIntake;
         this.foodEaten = foodEaten;
-    }
+        }
 
     public General (double dailyWeight){
         this.dailyWeight = dailyWeight;

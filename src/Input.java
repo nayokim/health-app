@@ -23,7 +23,7 @@ public class Input {
     public int getInt(int min, int max){
         int aNumber;
         try {
-            aNumber = Integer.valueOf(this.getString("Give me a number between " + min + " and "  + max));
+            aNumber = Integer.valueOf(this.getString("Choose an option from above:  "));
         } catch (NumberFormatException e) {
             return getInt(min, max);
         }
