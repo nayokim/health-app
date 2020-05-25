@@ -16,7 +16,7 @@ public class AppTest {
                 case 2:
                     double dailyWeight = Double.valueOf(input.getString("Enter your daily weight"));
                     double caloriesIntake = Double.valueOf(input.getString("Enter your Caloric Intake for the day"));
-                    String food = input.getString("What did you eat today? (LIST ALL FOODS!DONT LIE! THIS IS FOR YOU!");
+                    String food = input.getString("What did you eat today? (LIST ALL FOODS!DONT LIE! THIS IS FOR YOU!)");
                     General general = new General(dailyWeight,caloriesIntake, food);
                     FilesUtils.writeFile(general);
             }
