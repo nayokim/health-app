@@ -19,6 +19,9 @@ public class AppTest {
                     String food = input.getString("What did you eat today? (LIST ALL FOODS!DONT LIE! THIS IS FOR YOU!)");
                     General general = new General(dailyWeight,caloriesIntake, food);
                     FilesUtils.writeFile(general);
+
+                case 3:
+
             }
         }
     }

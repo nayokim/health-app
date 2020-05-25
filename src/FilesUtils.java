@@ -39,6 +39,8 @@ public class FilesUtils {
         }
     }// end createFile
 
+
+
     public static void writeFile(General general){
         String info = String.format("%f | %f|  %s ", general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
         try {
@@ -55,6 +57,7 @@ public class FilesUtils {
     public static void readFile(){
         try {
             List<String> lines= Files.readAllLines(dataFile);
+            System.out.printf("%s %s %s", "Daily weight |" , "Caloric Intake | " , "Foods Eaten");
             for (String line : lines ){
                 System.out.println(line);
             }
