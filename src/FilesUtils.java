@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class FilesUtils {
 
     private static String directory = "WeightManagement";
-    private static String filename = "Weight";
+    private static String filename = "ALL DATA";
+
 
     private static Path dataDirectory = Paths.get(directory);
     private static Path dataFile = Paths.get(directory,filename);
@@ -37,15 +38,13 @@ public class FilesUtils {
             }
         }
     }// end createFile
-//
+
     public static void writeFile(General general){
-       Scanner scanner = new Scanner(System.in);
-        System.out.println("What was your weight today?");
-       String dailyWeight = scanner.nextLine();
+        String info = String.format("%f | %f|  %s ", general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
         try {
             Files.write(
                     dataFile,
-                    Arrays.asList(dailyWeight),
+                    Arrays.asList(info),
                     StandardOpenOption.APPEND);
         }catch (IOException e){
             System.out.println("problems writing to the file");
@@ -67,5 +66,7 @@ public class FilesUtils {
 
     public static void deleteStudent(){};
     public static void  searchStudent(){};
+
+
 
 }//end FileUtils class

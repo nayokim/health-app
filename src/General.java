@@ -14,6 +14,12 @@ public class General {
         this.foodEaten = foodEaten;
     }
 
+    public General (double dailyWeight, double caloricIntake, String foodEaten) {
+        this.dailyWeight = dailyWeight;
+        this.caloricIntake = caloricIntake;
+        this.foodEaten = foodEaten;
+    }
+
     public General (double dailyWeight){
         this.dailyWeight = dailyWeight;
     }
@@ -43,15 +49,15 @@ public class General {
         this.dailyAlottedCalories = dailyAlottedCalories;
     }
 
-    public void getCaloricIntake(){
-        this.caloricIntake = caloricIntake;
+    public double getCaloricIntake(){
+        return this.caloricIntake;
     }
 
     public double setCaloricIntake(double caloricIntake){
         return this.caloricIntake;
     }
 
-    public void getFoodEaten(){
-        this.foodEaten =foodEaten;
+    public String getFoodEaten(){
+        return this.foodEaten;
     }
 }
