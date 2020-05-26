@@ -22,6 +22,7 @@ public class AppTest {
 
                 case 4:
                     System.out.println("This is for you! Have a good day!");
+                    InspirationalQuotes.getQuotes();
                     System.exit(0);
                     break;
 
