@@ -13,12 +13,16 @@ public class AppTest {
                     FilesUtils.readFile();
                     break;
                 case 2:
+                    String date = input.getString("What is the date?");
                     int dailyWeight = Integer.valueOf(input.getString("Enter your daily weight"));
                     int caloriesIntake = Integer.valueOf(input.getString("Enter your Caloric Intake for the day"));
                     String food = input.getString("What did you eat today? (LIST ALL FOODS!DONT LIE! THIS IS FOR YOU!)");
-                    General general = new General(dailyWeight,caloriesIntake, food);
+                    General general = new General(date, dailyWeight,caloriesIntake, food);
                     FilesUtils.writeFile(general);
                     break;
+
+                case 3:
+
 
                 case 4:
                     System.out.println("This is for you! Have a good day!");

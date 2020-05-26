@@ -5,6 +5,7 @@ public class General {
     protected double caloricIntake;
     private double dailyAlottedCalories;
     private String foodEaten;
+    private String date;
 
     public General(double startingWeight, double dailyWeight, double caloricIntake, double dailyAlottedCalories,String foodEaten){
         this.startingWeight = startingWeight;
@@ -14,7 +15,8 @@ public class General {
         this.foodEaten = foodEaten;
     }
 
-    public General (double dailyWeight, double caloricIntake, String foodEaten){
+    public General (String date, double dailyWeight, double caloricIntake, String foodEaten){
+        this.date = date;
         this.dailyWeight = dailyWeight;
         this.caloricIntake = caloricIntake;
         this.foodEaten = foodEaten;
@@ -59,5 +61,9 @@ public class General {
 
     public String getFoodEaten(){
         return this.foodEaten;
+    }
+
+    public String getDate(){
+        return this.date;
     }
 }
