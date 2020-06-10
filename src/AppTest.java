@@ -22,8 +22,10 @@ public class AppTest {
                     break;
 
                 case 3:
-
-
+                    FilesUtils.readFile();
+                    String deleteLine = input.getString("Which date would you like to delete?");
+                    FilesUtils.delete(deleteLine);
+                    break;
 
                 case 4:
                     System.out.println("This is for you!\nHere is your Quote of the day:\n");

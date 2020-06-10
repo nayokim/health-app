@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class FilesUtils {
     }
 
     public static void writeFile(General general){
-        String info = String.format("%9s | %11d | %16d|  %12s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
+        String info = String.format("%9s | %13d | %15d|  %12s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
         try {
             Files.write(
                     dataFile,
@@ -61,6 +62,26 @@ public class FilesUtils {
             }
         }catch(IOException e){
             System.out.println("error with reading the file");
+            e.printStackTrace();
+        }
+    }
+
+    static void delete (String date) {
+        try {
+            List<String> lines = Files.readAllLines(dataFile);
+            List<String> writeLines = new ArrayList<>();
+
+            for(String line: lines){
+                if(line.endsWith(date)){
+                    writeLines.add(line);
+                }
+            }
+
+            Files.write(
+                    dataFile,
+                    writeLines
+            );
+        } catch(IOException e){
             e.printStackTrace();
         }
     }
