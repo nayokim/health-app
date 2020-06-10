@@ -14,8 +14,8 @@ public class AppTest {
                     break;
                 case 2:
                     String date = input.getString("What is the date?");
-                    int dailyWeight = Integer.valueOf(input.getString("Enter your daily weight"));
-                    int caloriesIntake = Integer.valueOf(input.getString("Enter your Caloric Intake for the day"));
+                    int dailyWeight = Integer.parseInt(input.getString("Enter your daily weight"));
+                    int caloriesIntake = Integer.parseInt(input.getString("Enter your Caloric Intake for the day"));
                     String food = input.getString("What did you eat today? (LIST ALL FOODS!DONT LIE! THIS IS FOR YOU!)");
                     General general = new General(date, dailyWeight,caloriesIntake, food);
                     FilesUtils.writeFile(general);
@@ -24,7 +24,7 @@ public class AppTest {
                 case 3:
                     FilesUtils.readFile();
                     String deleteLine = input.getString("Which date would you like to delete?");
-                    FilesUtils.delete(deleteLine);
+                    FilesUtils.deleteEntry();
                     break;
 
                 case 4:

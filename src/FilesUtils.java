@@ -66,13 +66,17 @@ public class FilesUtils {
         }
     }
 
-    static void delete (String date) {
+    static void deleteEntry () {
+        Scanner scanner = new Scanner(System.in);
+        String userDelete = scanner.next();
+
+        Path filePath = Paths.get(directory,filename);
         try {
-            List<String> lines = Files.readAllLines(dataFile);
+            List<String> lines = Files.readAllLines(filePath);
             List<String> writeLines = new ArrayList<>();
 
             for(String line: lines){
-                if(line.endsWith(date)){
+                if(line.contains(userDelete)){
                     writeLines.add(line);
                 }
             }
