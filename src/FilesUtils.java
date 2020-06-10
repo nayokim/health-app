@@ -40,7 +40,7 @@ public class FilesUtils {
     }
 
     public static void writeFile(General general){
-        String info = String.format("%s | %d | %d|  %s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
+        String info = String.format("%9s | %11d | %16d|  %12s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
         try {
             Files.write(
                     dataFile,
@@ -55,7 +55,7 @@ public class FilesUtils {
     public static void readFile(){
         try {
             List<String> lines= Files.readAllLines(dataFile);
-            System.out.printf("%s %s %s %s","Date |", "Daily weight |" , "Caloric Intake | " , "Foods Eaten");
+            System.out.printf("%11s %15s %17s %12s","Date |", "Daily weight |" , "Caloric Intake | " , "Foods Eaten");
             for (String line : lines ){
                 System.out.println(line);
             }
