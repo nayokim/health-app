@@ -37,12 +37,10 @@ public class FilesUtils {
                 e.printStackTrace();
             }
         }
-    }// end createFile
-
-
+    }
 
     public static void writeFile(General general){
-        String info = String.format("%s | %f | %f|  %s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
+        String info = String.format("%s | %d | %d|  %s ", general.getDate(), general.getDailyWeight(), general.getCaloricIntake(),  general.getFoodEaten());
         try {
             Files.write(
                     dataFile,
@@ -67,8 +65,6 @@ public class FilesUtils {
         }
     }
 
-    public static void deleteStudent(){};
-    public static void  searchStudent(){};
 
 
 

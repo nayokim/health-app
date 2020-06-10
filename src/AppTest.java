@@ -24,12 +24,11 @@ public class AppTest {
                 case 3:
 
 
+
                 case 4:
-                    System.out.println("This is for you! Have a good day!");
+                    System.out.println("This is for you!\nHere is your Quote of the day:\n");
                     InspirationalQuotes.getQuotes();
                     System.exit(0);
-                    break;
-
             }
         }
     }

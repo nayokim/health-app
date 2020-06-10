@@ -1,13 +1,13 @@
 public class General {
 
-    private double startingWeight;
-    private double dailyWeight;
-    protected double caloricIntake;
-    private double dailyAlottedCalories;
+    private int startingWeight;
+    private int dailyWeight;
+    protected int caloricIntake;
+    private int dailyAlottedCalories;
     private String foodEaten;
     private String date;
 
-    public General(double startingWeight, double dailyWeight, double caloricIntake, double dailyAlottedCalories,String foodEaten){
+    public General(int startingWeight, int dailyWeight, int caloricIntake, int dailyAlottedCalories,String foodEaten){
         this.startingWeight = startingWeight;
         this.dailyWeight = dailyWeight;
         this.caloricIntake = caloricIntake;
@@ -15,47 +15,47 @@ public class General {
         this.foodEaten = foodEaten;
     }
 
-    public General (String date, double dailyWeight, double caloricIntake, String foodEaten){
+    public General (String date, int dailyWeight, int caloricIntake, String foodEaten){
         this.date = date;
         this.dailyWeight = dailyWeight;
         this.caloricIntake = caloricIntake;
         this.foodEaten = foodEaten;
         }
 
-    public General (double dailyWeight){
+    public General (int dailyWeight){
         this.dailyWeight = dailyWeight;
     }
 
 
-    public double getStartingWeight() {
+    public int getStartingWeight() {
         return startingWeight;
     }
 
-    public void setStartingWeight(double startingWeight) {
+    public void setStartingWeight(int startingWeight) {
         this.startingWeight = startingWeight;
     }
 
-    public double getDailyWeight() {
+    public int getDailyWeight() {
         return dailyWeight;
     }
 
-    public void setDailyWeight(double dailyWeight) {
+    public void setDailyWeight(int dailyWeight) {
         this.dailyWeight = dailyWeight;
     }
 
-    public double getDailyAlottedCalories() {
+    public int getDailyAlottedCalories() {
         return dailyAlottedCalories;
     }
 
-    public void setDailyAlottedCalories(double dailyAlottedCalories) {
+    public void setDailyAlottedCalories(int dailyAlottedCalories) {
         this.dailyAlottedCalories = dailyAlottedCalories;
     }
 
-    public double getCaloricIntake(){
+    public int getCaloricIntake(){
         return this.caloricIntake;
     }
 
-    public double setCaloricIntake(double caloricIntake){
+    public int setCaloricIntake(int caloricIntake){
         return this.caloricIntake;
     }
 
